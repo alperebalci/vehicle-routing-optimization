@@ -200,9 +200,10 @@ def _compatible(
     forced_customers: set[int] = set()
     for forced_id in restrictions.forced_routes:
         forced_customers.update(routes[forced_id].customer_set)
-    if route_id not in restrictions.forced_routes and subset.intersection(forced_customers):
-        return False
-    return True
+    return not (
+        route_id not in restrictions.forced_routes
+        and bool(subset.intersection(forced_customers))
+    )
 
 
 def _initial_active_routes(
