@@ -18,4 +18,6 @@ __all__ = [
     "enumerate_routes",
     "full_integer_master",
     "solve_root_column_generation",
-]
+, "PricingResult", "price_route_label_setting"]
+
+from .pricing import PricingResult, price_route_label_setting
