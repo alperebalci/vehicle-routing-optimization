@@ -1,0 +1,21 @@
+schema_version: 1
+repository: vehicle-routing-optimization
+role: umbrella
+axis: problem-class
+area: vehicle-routing
+status: active
+owner: jorsacademy
+projects:
+  - capacitated-vrp-branch-and-cut-python
+  - dynamic-cvrptw-online-reoptimization-python
+  - multi-objective-cvrp-nsga2-python
+  - pickup-delivery-time-windows-ortools
+  - pyvrp-capacitated-vehicle-routing
+  - rl-hyper-heuristic-cvrp
+  - stochastic-cvrp-sample-average-approximation-python
+  - time-dependent-vehicle-routing-alns-python
+  - traveling-salesman-optimization-pyomo
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
