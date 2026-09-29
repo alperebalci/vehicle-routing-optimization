@@ -73,8 +73,8 @@ def test_time_window_can_remove_customer_pairs() -> None:
         coordinates=[[0, 0], [1, 0], [3, 0]],
         demand=[0, 1, 1],
         ready=[0, 0, 0],
-        due=[100, 1.1, 2.1],
-        service=[0, 0, 0],
+        due=[100, 1.1, 3.1],
+        service=[0, 0.2, 0],
         capacity=2,
         max_vehicles=2,
     )
