@@ -1,0 +1,47 @@
+name: Exact VRPTW BPC
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "projects/exact-branch-price-cut-vrptw/**"
+      - ".github/workflows/exact-vrptw-bpc.yml"
+  pull_request:
+    paths:
+      - "projects/exact-branch-price-cut-vrptw/**"
+      - ".github/workflows/exact-vrptw-bpc.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    defaults:
+      run:
+        working-directory: projects/exact-branch-price-cut-vrptw
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Test
+        run: pytest -q
+
+      - name: Benchmark smoke
+        run: python -m vrptw_bpc.experiment
