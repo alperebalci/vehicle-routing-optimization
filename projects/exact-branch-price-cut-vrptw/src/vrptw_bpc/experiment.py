@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 
+import numpy as np
+
 from .model import (
     VRPTWInstance,
     branch_price_cut,
@@ -55,5 +57,14 @@ def run() -> dict[str, object]:
     }
 
 
+class _NumpyEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.generic):
+            return obj.item()
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super().default(obj)
+
+
 if __name__ == "__main__":
-    print(json.dumps(run(), indent=2))
+    print(json.dumps(run(), indent=2, cls=_NumpyEncoder))
