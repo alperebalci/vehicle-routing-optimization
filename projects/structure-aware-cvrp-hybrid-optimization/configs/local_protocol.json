@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-02",
+  "base_commit": "8432890221eaef78f24acea9c6cc79453e67af2e",
+  "suite": {"sizes": [6,24,60], "seeds": [11,12,13], "seconds": 0.4, "proposals": 3000},
+  "micro": {"sizes": [10,30,60], "seeds": [11,12,13], "proposals": 5000},
+  "root_alns": {"sizes": [18,36], "seeds": [11,12,13], "iterations": 100},
+  "interpretation": "CLI argument record, not an auto-loaded configuration; no test-set tuning"
+}

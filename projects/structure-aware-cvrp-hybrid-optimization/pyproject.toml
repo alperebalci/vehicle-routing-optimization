@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structure-aware-cvrp-lab"
+version = "0.1.0"
+description = "CVRP move-evaluation ablations and local-search/MIP experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.12,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+comparators = ["gurobipy>=12", "pyvrp>=0.14,<0.15"]
+
+[project.scripts]
+cvrp-lab = "cvrp_lab.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cvrp_lab*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

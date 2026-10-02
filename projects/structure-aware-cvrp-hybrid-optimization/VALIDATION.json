@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-02",
+  "local_status": "passed",
+  "local_tests": 59,
+  "scope": "47 new research tests and 12 incremental/root-ALNS tests; full pre-existing root suite deferred to GitHub CI",
+  "base_commit": "8432890221eaef78f24acea9c6cc79453e67af2e",
+  "external_adapters_executed": false,
+  "files": {
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/domain.py": "63addc1595fdd2f745f65667037d01b9ed4df78d98c37627a0f711aeab398884",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/benchmark.py": "33d07976e6681b2b70e3c6fa8e809574f148c3c1cbe6ce25f8d19eb3b86bf548",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/search.py": "f8a0ec7bd4df4b08e1fdd63bedb3fa4f96fdbc119746276fb9598806478ea86a",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/adapters.py": "77b3d0a1084828f11b721ddbc03ecdbec6e5cd056e88d6a96d7a2dd5c2965ee6",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/mip.py": "5a22841fd7d01ffb3e314aa2550b654b1a9748aa83ed1faafa3310df75cd7d00",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/structure-aware-cvrp-hybrid-optimization/cvrp_lab/moves.py": "d6a68ac096bec420eba5c994303d5acfd5b50b7bd85e7b2153da3d954143026e",
+    "projects/structure-aware-cvrp-hybrid-optimization/tests/test_structure_cvrp.py": "d8beb1b0aa3602ff19e65c61f7e9a5768d62739912f91aa8a8434e897efe0488",
+    "src/alns_vrp/alns.py": "e9ce2639f5253155e88ee66370af28705457b45921e8b1054182ceeae9b082f1",
+    "src/alns_vrp/local_search.py": "fee42c0c23eee1dc0f94ee9ca2dd2fb7adbd812d0efea0d3c5debaa1c8a277a1",
+    "tests/test_incremental_two_opt.py": "1ef070c2e2ed5dad71c7fed3b4d81b0c9848cda8593387db819720f415f675b6"
+  }
+}
