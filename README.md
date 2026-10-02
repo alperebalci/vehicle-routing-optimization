@@ -14,6 +14,7 @@ This repository is the primary umbrella repository for this Jors Academy researc
 - [`pyvrp-capacitated-vehicle-routing`](projects/pyvrp-capacitated-vehicle-routing/)
 - [`rl-hyper-heuristic-cvrp`](projects/rl-hyper-heuristic-cvrp/)
 - [`stochastic-cvrp-sample-average-approximation-python`](projects/stochastic-cvrp-sample-average-approximation-python/)
+- [`structure-aware-cvrp-hybrid-optimization`](projects/structure-aware-cvrp-hybrid-optimization/)
 - [`time-dependent-vehicle-routing-alns-python`](projects/time-dependent-vehicle-routing-alns-python/)
 - [`traveling-salesman-optimization-pyomo`](projects/traveling-salesman-optimization-pyomo/)
 
@@ -137,6 +138,8 @@ where `T` decreases geometrically. The initial temperature is calibrated from a 
 ## Local search
 
 After repair, deterministic best-improvement **2-opt** is applied independently to each route. The destroy/repair layer changes customer assignment and route structure; 2-opt removes avoidable crossings and improves within-route ordering.
+
+The default 2-opt evaluator uses symmetric four-edge deltas. Set `ALNSConfig(local_search_evaluation="full")` to retain full route recomputation for comparisons. See the [evaluation and MIP hybrid experiments](projects/structure-aware-cvrp-hybrid-optimization/) for the test protocol and measured results.
 
 ## Exact small-instance benchmark
 

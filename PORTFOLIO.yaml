@@ -13,6 +13,7 @@ projects:
   - pyvrp-capacitated-vehicle-routing
   - rl-hyper-heuristic-cvrp
   - stochastic-cvrp-sample-average-approximation-python
+  - structure-aware-cvrp-hybrid-optimization
   - time-dependent-vehicle-routing-alns-python
   - traveling-salesman-optimization-pyomo
 conventions:

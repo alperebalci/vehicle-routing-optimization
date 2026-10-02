@@ -25,8 +25,11 @@ class ALNSConfig:
     score_improve: float = 4.0
     score_accept: float = 1.0
     local_search: bool = True
+    local_search_evaluation: str = "incremental"
 
     def validate(self, n_customers: int) -> None:
+        if self.local_search_evaluation not in {"full", "incremental"}:
+            raise ValueError("local_search_evaluation must be full or incremental")
         if self.iterations <= 0:
             raise ValueError("iterations must be positive")
         if self.min_removal <= 0:
@@ -91,7 +94,7 @@ def solve_alns(
     if not current.is_feasible(instance):
         raise ValueError("initial_solution must be complete and feasible")
     if cfg.local_search:
-        current = two_opt(current, instance)
+        current = two_opt(current, instance, evaluation=cfg.local_search_evaluation)
 
     current_cost = current.total_distance(instance)
     initial_cost = current_cost
@@ -115,7 +118,7 @@ def solve_alns(
         partial, removed = DESTROY_OPERATORS[destroy_name](instance, current, q, rng)
         candidate = REPAIR_OPERATORS[repair_name](instance, partial, removed, rng)
         if cfg.local_search:
-            candidate = two_opt(candidate, instance)
+            candidate = two_opt(candidate, instance, evaluation=cfg.local_search_evaluation)
         if not candidate.is_feasible(instance):
             raise RuntimeError("operator pair generated an infeasible solution")
 

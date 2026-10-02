@@ -1,0 +1,45 @@
+name: CVRP evaluation and hybrid tests
+on:
+  push:
+    paths:
+      - 'src/alns_vrp/**'
+      - 'tests/**'
+      - 'projects/structure-aware-cvrp-hybrid-optimization/**'
+      - '.github/workflows/structure-aware-cvrp.yml'
+  pull_request:
+    paths:
+      - 'src/alns_vrp/**'
+      - 'tests/**'
+      - 'projects/structure-aware-cvrp-hybrid-optimization/**'
+      - '.github/workflows/structure-aware-cvrp.yml'
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install root and research packages
+        run: |
+          python -m pip install -e '.[dev]'
+          python -m pip install -e 'projects/structure-aware-cvrp-hybrid-optimization[dev]'
+          python -m pip check
+      - name: Root regression tests
+        run: python -m pytest tests
+      - name: Research tests
+        run: python -m pytest projects/structure-aware-cvrp-hybrid-optimization/tests
+      - name: Small experiment smoke
+        run: |
+          cvrp-lab --mode suite --sizes 6 --seeds 11 --seconds 0.2 --proposals 100 --out /tmp/cvrp-smoke.json
+          python -c 'import json; r=json.load(open("/tmp/cvrp-smoke.json")); assert len(r["runs"]) == 9'

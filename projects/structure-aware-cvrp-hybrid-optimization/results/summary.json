@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-02",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "processor": "",
+    "cpu_count": 5,
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "highs_threads": 1,
+    "source_sha256": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adapters.py": "77b3d0a1084828f11b721ddbc03ecdbec6e5cd056e88d6a96d7a2dd5c2965ee6",
+      "benchmark.py": "33d07976e6681b2b70e3c6fa8e809574f148c3c1cbe6ce25f8d19eb3b86bf548",
+      "domain.py": "63addc1595fdd2f745f65667037d01b9ed4df78d98c37627a0f711aeab398884",
+      "mip.py": "5a22841fd7d01ffb3e314aa2550b654b1a9748aa83ed1faafa3310df75cd7d00",
+      "moves.py": "d6a68ac096bec420eba5c994303d5acfd5b50b7bd85e7b2153da3d954143026e",
+      "search.py": "f8a0ec7bd4df4b08e1fdd63bedb3fa4f96fdbc119746276fb9598806478ea86a"
+    }
+  },
+  "native_runs": 81,
+  "independently_feasible_final_solutions": 81,
+  "micro": [
+    {
+      "n": 10,
+      "seed": 11,
+      "evaluations": 5000,
+      "full": 0.030979975000036575,
+      "incremental": 0.010862668000072517,
+      "ratio_full_over_incremental": 2.851967398785433
+    },
+    {
+      "n": 10,
+      "seed": 12,
+      "evaluations": 5000,
+      "incremental": 0.00961522700004025,
+      "full": 0.033318802999929176,
+      "ratio_full_over_incremental": 3.465212313738376
+    },
+    {
+      "n": 10,
+      "seed": 13,
+      "evaluations": 5000,
+      "full": 0.02920602200003941,
+      "incremental": 0.008693023999967409,
+      "ratio_full_over_incremental": 3.359707968153419
+    },
+    {
+      "n": 30,
+      "seed": 11,
+      "evaluations": 5000,
+      "full": 0.05917870199994013,
+      "incremental": 0.010532476999969731,
+      "ratio_full_over_incremental": 5.618687987650977
+    },
+    {
+      "n": 30,
+      "seed": 12,
+      "evaluations": 5000,
+      "incremental": 0.009503257999995185,
+      "full": 0.049026002000005064,
+      "ratio_full_over_incremental": 5.158862571134016
+    },
+    {
+      "n": 30,
+      "seed": 13,
+      "evaluations": 5000,
+      "full": 0.05422310999995261,
+      "incremental": 0.007851051999978154,
+      "ratio_full_over_incremental": 6.9064769918863735
+    },
+    {
+      "n": 60,
+      "seed": 11,
+      "evaluations": 5000,
+      "full": 0.09198959299999387,
+      "incremental": 0.010164705999955004,
+      "ratio_full_over_incremental": 9.049901984415593
+    },
+    {
+      "n": 60,
+      "seed": 12,
+      "evaluations": 5000,
+      "incremental": 0.010231180000005224,
+      "full": 0.10015501800000948,
+      "ratio_full_over_incremental": 9.789195185692982
+    },
+    {
+      "n": 60,
+      "seed": 13,
+      "evaluations": 5000,
+      "full": 0.08191865699996015,
+      "incremental": 0.007816179999963424,
+      "ratio_full_over_incremental": 10.480651290060296
+    }
+  ],
+  "root_alns": [
+    {
+      "n": 18,
+      "seed": 11,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 388.7538010114024,
+      "full": 0.030664868999906503,
+      "incremental": 0.01911645799998496,
+      "ratio_full_over_incremental": 1.6041083029047865
+    },
+    {
+      "n": 18,
+      "seed": 12,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 382.16187169140943,
+      "full": 0.029749573999993117,
+      "incremental": 0.01817465399994944,
+      "ratio_full_over_incremental": 1.6368715464996404
+    },
+    {
+      "n": 18,
+      "seed": 13,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 413.49190535103776,
+      "full": 0.026480780000042614,
+      "incremental": 0.021656830999972954,
+      "ratio_full_over_incremental": 1.2227449159147838
+    },
+    {
+      "n": 36,
+      "seed": 11,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 601.7115809469608,
+      "full": 0.08940176400005839,
+      "incremental": 0.07075035100001514,
+      "ratio_full_over_incremental": 1.263622904146995
+    },
+    {
+      "n": 36,
+      "seed": 12,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 614.8676660921909,
+      "full": 0.09125635099996998,
+      "incremental": 0.07068482500005757,
+      "ratio_full_over_incremental": 1.2910317172023225
+    },
+    {
+      "n": 36,
+      "seed": 13,
+      "iterations": 100,
+      "identical_trajectory": true,
+      "objective": 787.5967403735339,
+      "full": 0.0749267429999918,
+      "incremental": 0.05617775200005326,
+      "ratio_full_over_incremental": 1.3337440593906422
+    }
+  ],
+  "wall_time_means": [
+    {
+      "variant": "full",
+      "cases": 9,
+      "mean_objective_over_initial": 0.9523482465549233,
+      "max_overrun_seconds": 0.0017924090001087967,
+      "accepted_mip_returns": 0
+    },
+    {
+      "variant": "incremental",
+      "cases": 9,
+      "mean_objective_over_initial": 0.9523482465549233,
+      "max_overrun_seconds": 0.00020328100001731908,
+      "accepted_mip_returns": 0
+    },
+    {
+      "variant": "expanded",
+      "cases": 9,
+      "mean_objective_over_initial": 0.6539787516694698,
+      "max_overrun_seconds": 0.00029115699996962174,
+      "accepted_mip_returns": 0
+    },
+    {
+      "variant": "sequential",
+      "cases": 9,
+      "mean_objective_over_initial": 0.6630231903125029,
+      "max_overrun_seconds": 0.05872653300000363,
+      "accepted_mip_returns": 4
+    },
+    {
+      "variant": "iterative",
+      "cases": 9,
+      "mean_objective_over_initial": 0.8094705995612458,
+      "max_overrun_seconds": 0.017937997999956656,
+      "accepted_mip_returns": 10
+    },
+    {
+      "variant": "mip",
+      "cases": 9,
+      "mean_objective_over_initial": 0.9861875940481695,
+      "max_overrun_seconds": 0.029405180999992786,
+      "accepted_mip_returns": 5
+    }
+  ],
+  "external": {
+    "gurobi": {
+      "installed": false,
+      "version": null,
+      "license_verified": false,
+      "executed": false
+    },
+    "hexaly": {
+      "installed": false,
+      "version": null,
+      "license_verified": false,
+      "executed": false
+    },
+    "pyvrp": {
+      "installed": false,
+      "version": null,
+      "license_verified": false,
+      "executed": false
+    }
+  },
+  "scope": "synthetic local experiments; not a product comparison"
+}
