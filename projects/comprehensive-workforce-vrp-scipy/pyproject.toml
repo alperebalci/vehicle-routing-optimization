@@ -17,7 +17,7 @@ dependencies = [
 dev = ["pytest>=8"]
 
 [tool.setuptools]
-py-modules = ["unified_workforce_vrp"]
+py-modules = ["unified_workforce_vrp", "vrp_models", "vrp_solver", "vrp_reference"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
