@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comprehensive-workforce-vrp-scipy"
+version = "0.1.0"
+description = "Integrated multi-day multi-skill workforce vehicle routing MILP with synchronized visits and rolling-horizon reoptimization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = ["unified_workforce_vrp", "vrp_models", "vrp_solver", "vrp_reference"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
