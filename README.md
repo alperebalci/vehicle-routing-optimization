@@ -8,6 +8,7 @@ This repository is the primary umbrella repository for this Jors Academy researc
 ### Included projects
 
 - [`capacitated-vrp-branch-and-cut-python`](projects/capacitated-vrp-branch-and-cut-python/)
+- [`comprehensive-workforce-vrp-scipy`](projects/comprehensive-workforce-vrp-scipy/)
 - [`dynamic-cvrptw-online-reoptimization-python`](projects/dynamic-cvrptw-online-reoptimization-python/)
 - [`multi-objective-cvrp-nsga2-python`](projects/multi-objective-cvrp-nsga2-python/)
 - [`pickup-delivery-time-windows-ortools`](projects/pickup-delivery-time-windows-ortools/)
