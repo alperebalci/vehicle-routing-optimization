@@ -232,6 +232,10 @@ The suite verifies
 
 GitHub Actions installs the package, compiles the source tree, and runs the complete suite on Python 3.10 and 3.12.
 
+## Research benchmark evidence
+
+Before publishing computational performance claims, follow the [benchmark evidence protocol](benchmarks/README.md). A dependency-free [manifest validator](scripts/validate_benchmark_manifest.py) now checks provenance declarations and matched instance/seed/time budgets; it does not independently certify solver correctness.
+
 ## Methodological notes
 
 - ALNS is a metaheuristic. A good result on a large instance is not a proof of global optimality.
